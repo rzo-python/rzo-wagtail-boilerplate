@@ -1,0 +1,29 @@
+dist: xenial
+sudo: required
+language: python
+python:
+  - "3.6"
+cache: pip
+
+services:
+  - postgresql
+addons:
+  apt:
+    sources:
+      - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful main restricted'
+      - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ artful-updates main restricted'
+    packages:
+      # update sqlite3 to get rid of segmentation faults with Django 2.0, for example:
+      # https://travis-ci.org/kiwitcms/Kiwi/jobs/322848116
+      # all sources I've read point to possible issues with sqlite itself
+      - sqlite3
+
+install:
+  - pip install -r dev-requirements.txt
+
+script:
+  - django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,md,rst travis_ci
+  - cd travis_ci
+  - python manage.py migrate
+
+
