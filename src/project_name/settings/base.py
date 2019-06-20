@@ -24,6 +24,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+    'api',
     'home',
     'search',
 
@@ -161,3 +162,9 @@ WAGTAIL_SITE_NAME = "{{ project_name }}"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+# Graphene Settings to use GraphQL
+
+GRAPHENE = {
+        'SCHEMA': 'api.schema.schema',
+}
