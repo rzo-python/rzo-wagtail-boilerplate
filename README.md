@@ -29,11 +29,11 @@ Admin:
 
 - Create your working environment and virtualenv
 - Install Django 2.2.2
-- pip install Django 2.2.2
+- pipenv install Django 2.2.2
 - $ django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,html,md,rst projectname
 - $ cd projectname
 - By default dev environment use SQLite database
-- $ pip install -r dev-requirements.txt
+- $ pipenv install -r dev-requirements.txt
 - $ python manage.py migrate
 - $ python manage.py runserver
 
@@ -47,7 +47,7 @@ Describe your project here.
 ## Prerequisites ##
 
 - Python 3.7 recommended
-- pipenv (pip + virtualenv)
+- pipenv (pipenv + virtualenv)
 
 ## Installation ##
 
