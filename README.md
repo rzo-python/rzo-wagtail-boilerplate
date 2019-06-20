@@ -28,10 +28,11 @@ Admin:
 ## How to use this project template to create your project ##
 
 - $ pipenv install Django==2.2.2
-- $ pipenv run django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,html,md,rst projectname
+- $ pipenv run django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,md,rst projectname
 - $ cd projectname
 - $ pipenv install -r dev-requirements.txt
 - $ pipenv shell
+- $ cd src
 - $ python manage.py migrate
 - $ python manage.py runserver
 
