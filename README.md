@@ -31,6 +31,7 @@ Admin:
 - $ pipenv run django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,html,md,rst projectname
 - $ cd projectname
 - $ pipenv install -r dev-requirements.txt
+- $ pipenv shell
 - $ python manage.py migrate
 - $ python manage.py runserver
 
