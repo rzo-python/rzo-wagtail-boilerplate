@@ -27,15 +27,14 @@ Admin:
 
 ## How to use this project template to create your project ##
 
-- Create your working environment and virtualenv
-- Install Django 2.2.2
-- pipenv install Django 2.2.2
-- $ django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,html,md,rst projectname
+- $ pipenv install Django==2.2.2
+- $ pipenv run django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,html,md,rst projectname
 - $ cd projectname
-- By default dev environment use SQLite database
 - $ pipenv install -r dev-requirements.txt
 - $ python manage.py migrate
 - $ python manage.py runserver
+
+(By default dev environment use SQLite database)
 
 {% endif %}
 # The {{ project_name|title }} Project #
