@@ -24,7 +24,7 @@ install:
 
 script:
   - django-admin.py startproject --template https://github.com/rzo-python/rzo-wagtail-boilerplate/archive/master.zip --extension py,md,rst travis_ci
-  - cd travis_ci
+  - cd travis_ci/src
   - python manage.py migrate
 
 
